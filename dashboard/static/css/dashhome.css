@@ -1,0 +1,90 @@
+.dashboard{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: alicewhite;
+    background: rgba(0,0,0,0);
+    /* border-radius: 15px;
+    box-shadow: 0 0 5px .9px rgba(170,170,170,0.5);
+    border: .2px solid rgba(170,170,170,0.22); */
+}
+
+.gridlayouts{
+    display: grid;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0);
+    align-items: stretch;
+    justify-content: stretch;
+    border-radius: 50px;
+    
+}
+
+.gridlayouts > *{
+    justify-self: stretch;
+    align-self: stretch;
+}
+
+.companyCon{
+    grid-area: companytitle;
+    border-right: 2.5px solid rgba(229, 211, 228, 0.1);
+    /* border: .8px solid rgba(170,170,170,0.5); */
+}
+
+.headerCon{
+    grid-area: header;
+    /* border: .8px solid rgba(170,170,170,0.5); */
+}
+
+.sidebarCon{
+    grid-area: sidebar;
+    border-right: 2.5px solid rgba(229, 211, 228, 0.1);
+    /* border: .8px solid rgba(170,170,170,0.5); */
+}
+
+.mainCon{
+    grid-area: body;
+    /* border: .8px solid rgba(170,170,170,0.5); */
+}
+
+
+
+
+
+
+
+@media (max-width:60000px){
+
+    .gridlayouts{
+        grid-template-areas: 
+        "companytitle   header"
+        "sidebar        body";
+        grid-template-columns: 1fr 5fr;
+        grid-template-rows: 50px auto;
+    }
+
+    
+}
+
+
+@media (max-width:1012px){
+
+    .gridlayouts{
+        grid-template-areas: 
+        "header"
+        "body";
+        grid-template-columns: auto;
+        grid-template-rows: 50px auto;
+    }
+
+}

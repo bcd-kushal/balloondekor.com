@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', cursive;
+    transition: .5s;
+}
+
+html{
+    min-height: 100vh;
+    min-width: 100vw;
+    max-width: 100vw;
+}
+
+body{
+    background: linear-gradient(135deg, #1b0a54 0%, #04091d 70%, #04091d 100%);
+    color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

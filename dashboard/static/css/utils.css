@@ -1,0 +1,67 @@
+:root{
+    --sidebar_padding: 15px
+}
+
+.header,.sidebar,.company_title{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+}   
+
+.mainCon{
+    padding: 10px;
+}
+
+.header,.company_title{
+    display: flex;
+    align-items: center;
+}
+
+.company_title{
+    justify-content: flex-start;
+}
+
+.header{
+    justify-content: space-between;
+}
+
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: var(--sidebar_padding);
+}
+
+.sidebar > *{
+    margin-bottom: var(--sidebar_padding);
+    border: 20px;
+    display: flex;
+    /* background: rgb(166, 176, 214, 0.08); */
+    align-items: center;
+    justify-content: flex-start;
+    font-weight: bolder;
+    width: 100%;
+    min-height:45px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: 1.2s;
+}
+
+.sidebar > *:hover{
+    background: linear-gradient(136deg,rgba(166, 176, 214, 0.21) 0%,rgba(166, 176, 214, 0) 73%,rgba(166, 176, 214, 0) 100%);
+    transition: .5s;
+}
+.sidebar_profile{
+    bottom: 0;
+}
+.sidebar_seperator{
+    cursor: default;
+}
+.sidebar_seperator:hover{
+    background: transparent;
+    
+}
