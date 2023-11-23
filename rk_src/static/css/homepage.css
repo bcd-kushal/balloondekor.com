@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap');
+
+:root{
+    --bgcolor: rgb(255,255,255);
+    --prim-text-col: rgb(0,0,0);
+    --sec-text-col: rgb(70,70,70);
+}
+
+::-webkit-scrollbar{ display: none; }
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', cursive;
+}
+
+body{
+    min-height: 100vh;
+    min-width: 100vw;
+
+}
+
+.container{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 80vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.title{
+    height: 40%;
+    font-size: 150%;
+    text-align: center;
+    padding: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.items{
+    height: 60%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.item{
+    display: flex;
+    width: 100%;
+    margin-right: 25px;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    border: 1px solid var(--sec-text-col);
+    margin-bottom: 15px;
+}
+.item > *{
+    width: 300px;
+    text-align: center;
+    font-size: 120%;
+}
+button{
+    cursor: pointer;
+    max-width: 80px;
+    padding: 10px;
+}
+.productName,.productPrice{
+    text-align: left;
+    padding-left: 20px;
+
+}
+
+.headerSection,.footerSection{
+    height: auto;
+    width: 100%;
+    position: relative;
+}
