@@ -8,6 +8,9 @@
     transition: .5s;
 }
 
+::-webkit-scrollbar{ display: none; }
+
+
 html{
     min-height: 100vh;
     min-width: 100vw;
@@ -20,4 +23,48 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+ 
+.dashboard,.signinContainer{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: alicewhite;
+    background: rgba(0,0,0,0);
+    /* border-radius: 15px;
+    box-shadow: 0 0 5px .9px rgba(170,170,170,0.5);
+    border: .2px solid rgba(170,170,170,0.22); */
+}
+
+.signinContainer{
+    height: 90vh;
+    width: 800px;
+    backdrop-filter: blur(10px);
+    background: rgba(255,255,255,0.06);
+    border-radius: 15px;
+}   
+.signinContainer::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 300vh;
+    width: 300%;
+    background: linear-gradient(264deg, rgba(155, 122, 199, 0.249) 0%, transparent);
+    rotate: 52deg;
+}
+
+
+@media (max-width: 900px){
+    .signinContainer{
+        width: 95%;
+    }
 }

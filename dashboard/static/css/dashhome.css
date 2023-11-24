@@ -1,20 +1,3 @@
-.dashboard{
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    width: 100vw;
-    overflow: hidden;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    color: alicewhite;
-    background: rgba(0,0,0,0);
-    /* border-radius: 15px;
-    box-shadow: 0 0 5px .9px rgba(170,170,170,0.5);
-    border: .2px solid rgba(170,170,170,0.22); */
-}
 
 .gridlayouts{
     display: grid;
@@ -70,7 +53,15 @@
         "companytitle   header"
         "sidebar        body";
         grid-template-columns: 1fr 5fr;
-        grid-template-rows: 50px auto;
+        grid-template-rows: 90px auto;
+    }
+
+
+    .large_screen{ display: flex; }
+    .small_screen{ display: none; }
+
+    .bodyBox{
+        width: calc( calc( 100% * 0.8333333333333334 ) - 15px );
     }
 
     
@@ -84,7 +75,19 @@
         "header"
         "body";
         grid-template-columns: auto;
-        grid-template-rows: 50px auto;
+        grid-template-rows: 90px auto;
     }
+
+    .sidebarCon,.companyCon{ display: none; }
+
+
+
+    .small_screen{ display: flex; }
+    .large_screen{ display: none !important; }
+
+    .bodyBox{
+        width: calc( 100% - 15px );
+    }
+
 
 }

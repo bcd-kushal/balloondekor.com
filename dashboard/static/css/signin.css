@@ -1,0 +1,147 @@
+:root{
+    --signinHeight: 85px;
+}
+
+.signin{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+.signin_name{
+    display: flex;
+    align-items: center;
+    font-size: 150%;
+}
+.signin_name,.submitrow{
+    position: relative;
+    height: var(--signinHeight);
+    width: 100%;
+    font-weight: bold;
+    padding: 20px;
+    position: fixed;
+    border-bottom: 1.2px solid rgba(166, 176, 214, 0.21);
+}
+.submitrow{
+    bottom: 0;
+    border: none;
+    border-top: 1.2px solid rgba(166, 176, 214, 0.21);
+    padding: 15px;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+}
+.submitrow button{
+    background: green;
+    color: aliceblue;
+    font-weight: bold;
+    width: 100px;
+    height: 100%;
+    padding: 5px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+}
+
+
+.register_field_row{
+    height: calc( 100% - 155px );
+    top: var(--signinHeight);
+    width: 100%;
+    position: relative;
+    padding: 30px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    overflow-y: scroll;
+}
+
+.register_field_row > *{
+    max-width: 300px;
+    width: 47.5%;
+    min-width: 200px;
+    margin: 20px 20px;
+    border-radius: 15px;
+    font-weight: bold;
+    color: rgba(156, 165, 199, 0.55);
+    padding: 30px 15px;
+    background: linear-gradient(228deg, rgba(155, 122, 199, 0.19) 0%, transparent 60%, transparent);
+}
+
+.register_field_row > *:hover,
+.register_field_row > *:focus{
+    background: linear-gradient(228deg, rgba(155, 122, 199, 0.249) 0%, transparent 60%, transparent);
+
+    border: .25px solid rgba(156, 165, 199, 0.25);
+}
+input,input:-webkit-autofill{
+    width: 100%;
+    height: 70px;
+    background: transparent;
+    outline: none;
+    text-decoration: none;
+    border: none;
+    color: aliceblue;
+    font-size: 165%;
+}
+
+.terms{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.terms input{
+    width: auto;
+    height: auto;
+}
+.terms > *{
+    margin: 0 7px 0 5px;
+    color: rgba(156, 165, 199, 0.85);
+}
+
+
+
+.terms input[type="checkbox"]{
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    height: 20px;
+    width: 20px;
+    border-radius: 3.5px;
+    border: 1.2px solid rgba(156, 165, 199, 0.55);
+    outline: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.terms input[type="checkbox"]:checked::before {
+    content: '\2713'; /* Unicode character for checkmark */
+    display: block;
+    position: absolute;
+    scale: .62;
+    margin-top: -10px;
+    color: green; /* Yellow color for the tick */
+    
+}
+
+
+
+button{
+    cursor: pointer;
+}
+
+button:hover{
+    text-decoration: underline;
+}
+
+@media (max-width:760px){
+    
+.register_field_row > *{
+    max-width: 100%;
+    width: 100%;
+    margin: 0 20px 25px 20px;
+    padding: 15px;
+}
+
+}
