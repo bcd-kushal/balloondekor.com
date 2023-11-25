@@ -26,7 +26,7 @@ body{
 }
 
  
-.dashboard,.signinContainer{
+.dashboard,.signinContainer,.loginContainer{
     position: absolute;
     display: flex;
     align-items: center;
@@ -44,14 +44,14 @@ body{
     border: .2px solid rgba(170,170,170,0.22); */
 }
 
-.signinContainer{
+.signinContainer,.loginContainer{
     height: 90vh;
     width: 800px;
     backdrop-filter: blur(10px);
     background: rgba(255,255,255,0.06);
     border-radius: 15px;
 }   
-.signinContainer::before{
+.signinContainer::before,.logninContainer::before{
     content: '';
     position: absolute;
     top: 0;
@@ -62,9 +62,34 @@ body{
     rotate: 52deg;
 }
 
+.loginContainer{
+    height: 600px;
+    width: 600px;
+}
+
+
+input[type="password"]::-webkit-password-slash {
+    color: white;
+}
+
+/* Microsoft browsers (Edge) */
+input[type="password"]::-ms-reveal {
+    color: white;
+}
+
 
 @media (max-width: 900px){
     .signinContainer{
         width: 95%;
+    }
+
+    .loginContainer{
+        width: 90%;
+    }
+}
+
+@media (max-height: 650px){
+    .loginContainer{
+        height: 90%;
     }
 }
