@@ -11,7 +11,19 @@
 .signin_name{
     display: flex;
     align-items: center;
+    justify-content: space-between;
+}
+.signin_name > *{
+    display: flex;
+    align-items: center;
     font-size: 150%;
+}
+
+.loginURL{
+    font-size: 70%;
+    font-weight: bolder;
+    letter-spacing: .5px;
+    color: rgba(156, 165, 199, 0.85);
 }
 .signin_name,.submitrow{
     position: relative;
@@ -125,6 +137,13 @@ input,input:-webkit-autofill{
     
 }
 
+a:hover{
+    color: rgba(209, 213, 229, 0.95);
+}
+
+a:visited{
+    color: rgba(156, 165, 199, 0.85);
+}
 
 
 button{
@@ -145,3 +164,4 @@ button:hover{
 }
 
 }
+
