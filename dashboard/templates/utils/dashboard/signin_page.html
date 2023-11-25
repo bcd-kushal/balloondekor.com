@@ -1,49 +1,176 @@
-<div class="signin">
-  <div class="signin_name">
-    Sign In</div>
+{% load static %}
 
-  <div class="register_field_row">
-    <div class="fname_input">
+<div class="signin">
+  <form
+    action="{% url 'dash-signin' %}"
+    method="post"
+    style="width: 100%; height: 100%"
+    onsubmit="return formValidate()"
+  >
+    {% csrf_token %}
+    <div class="signin_name">
+      <div class="signinName">Sign Up</div>
+      <div class="loginURL">
+        Already User?
+        <a
+          style="margin-left: 4px; text-decoration: underline; cursor: pointer"
+          href="../login/"
+          >Login</a
+        >
+      </div>
+    </div>
+
+    <div class="register_field_row">
+      <div class="fname_input">
         <div class="label">First Name</div>
         <div class="inputfield">
-          <input type="text" name="" id="">
+          <input
+            type="text"
+            name="{{ signin_form.first_name.name }}"
+            id="{{ signin_form.first_name.id_for_label }}"
+            value="{{ signin_form.first_name.value | default:'' }}"
+            autocomplete="off"
+          />
         </div>
       </div>
-  
+
       <div class="lname_input">
         <div class="label">Last Name</div>
         <div class="inputfield">
-          <input type="text" name="" id="">
+          <input
+            type="text"
+            name="{{ signin_form.last_name.name }}"
+            id="{{ signin_form.last_name.id_for_label }}"
+            value="{{ signin_form.last_name.value | default:'' }}"
+            autocomplete="off"
+          />
         </div>
       </div>
-  
-      <div class="email_input" style="max-width: 630px; width: 100%;">
+
+      <div class="email_input" style="max-width: 630px; width: 100%">
         <div class="label">Email ID</div>
         <div class="inputfield">
-          <input type="text" name="" id="">
+          <input
+            type="text"
+            name="{{ signin_form.signin_email.name }}"
+            id="{{ signin_form.signin_email.id_for_label }}"
+            value="{{ signin_form.signin_email.value | default:'' }}"
+            autocomplete="off"
+          />
         </div>
       </div>
-  
+
       <div class="mobile_input">
         <div class="label">Password</div>
         <div class="inputfield">
-          <input type="password" name="" id="">
+          <input
+            type="password"
+            name="{{ signin_form.signin_password1.name }}"
+            id="{{ signin_form.signin_password1.id_for_label }}"
+            value="{{ signin_form.signin_password1.value | default:'' }}"
+            autocomplete="off"
+          />
         </div>
       </div>
-  
+
       <div class="country_input">
         <div class="label">Re-enter Password</div>
         <div class="inputfield">
-          <input type="password" name="" id="">
+          <input
+            type="password"
+            name="{{ signin_form.signin_password2.name }}"
+            id="{{ signin_form.signin_password2.id_for_label }}"
+            value="{{ signin_form.signin_password2.value | default:'' }}"
+            autocomplete="off"
+          />
         </div>
       </div>
-  </div>
-
-  <div class="submitrow">
-    <div class="terms">
-        <input type="checkbox" name="" id="">
-        <div>I agree to the terms and services of this site</div>
     </div>
-    <button>Sign In ></button>
-  </div>
+
+    <div class="submitrow">
+      <div class="terms">
+        <input
+          type="checkbox"
+          name="sigin_terms_accepted"
+          id="terms_accepted"
+          autocomplete="off"
+        />
+        <div>I accept the terms and services</div>
+      </div>
+      <button id="signin_button">Sign In ></button>
+    </div>
+  </form>
 </div>
+
+<script>
+  /* 
+document.getElementById('signin_button').addEventListener('click', () => {
+    window.location.href = '../login/';
+});
+ */
+
+  function formValidate() {
+    //LAYER 1: ACCEPT TERMS AND CONDITIONS FIRST
+    if (document.getElementById("terms_accepted").checked) {
+      function isNull(str) {
+        const x = document.getElementById(str).value;
+        if (x == "" || x == undefined) return true;
+        return false;
+      }
+
+      //LAYER 2: CHECK IF ALL FIELDS ARE INSERTED OR NOT
+      if (
+        isNull("{{ signin_form.signin_password1.id_for_label }}") ||
+        isNull("{{ signin_form.signin_password2.id_for_label }}") ||
+        isNull("{{ signin_form.signin_email.id_for_label }}") ||
+        isNull("{{ signin_form.last_name.id_for_label }}") ||
+        isNull("{{ signin_form.first_name.id_for_label }}")
+      ) {
+        alert("Fill out all fields");
+        return false;
+      } else {
+        return true;
+      }
+    } else {
+      alert("Need to accept terms and services first");
+      return false;
+    }
+  }
+  /* 
+  document.getElementById("signin_button").addEventListener("click", () => {
+    //LAYER 1: ACCEPT TERMS AND CONDITIONS FIRST
+    if (document.getElementById("terms_accepted").checked) {
+      //LAYER 2: CHECK IF ALL FIELDS ARE INSERTED OR NOT
+
+      fetch("/signin/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          fname: document.getElementById("signin_fname").value,
+          lname: document.getElementById("signin_lname").value,
+          email: document.getElementById("signin_email").value,
+          pass1: document.getElementById("signin_pass1").value,
+          pass2: document.getElementById("signin_pass2").value,
+        }),
+      })
+        .then((response) => {
+          return response.json();
+        })
+        .then((data) => {
+          console.log(data);
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+        });
+    } else {
+      alert("Need to accept terms and services first");
+    }
+  }); */
+</script>
+
+<!-- 
+<script type="module" src="{% static 'js/user_auth.js' %}"></script>
+
+ -->
