@@ -14,4 +14,7 @@ urlpatterns = [
     path('payment/orders-paypal/', rv.get_form_data, name='paypal-order'),
 
     path('', dv.dash_home, name='dash-homepage'),
+    path('signin/', dv.dash_signin, name='dash-signin'),
+    path('login/', dv.capture_login_data, name='dash-login'),
+    
 ]
