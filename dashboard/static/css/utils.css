@@ -264,7 +264,7 @@
     justify-content: flex-end;
     height: 100%;
 }
-.inputfield input{
+.searchField input{
     background: linear-gradient(337deg, rgb(164 128 223 / 15%), transparent);
     outline: none;
     border: 1.4px solid rgba(156, 165, 199, 0.25);
