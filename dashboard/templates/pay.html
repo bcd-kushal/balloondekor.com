@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="{% static 'css/global.css' %} ">
+    <link rel="stylesheet" href="{% static 'css/signin.css' %} ">
+</head>
+<body>
+    
+
+    <div class="loginContainer">
+
+        {% include 'utils/dashboard/rzp_pay.html' %}
+
+    </div>
+
+    
+{% if payment %}
+
+<form action="/buymeacoffee/success/" method="post" style="z-index: 2147483649;background-color: #172d1b; cursor: pointer;">
+    <script
+        src="https://checkout.razorpay.com/v1/checkout.js"
+        data-key= "rzp_test_i2Olh4B1BnBa6y"
+        data-amount= "{{ payment.amount }}"
+        data-currency= "INR"
+        data-order_id= "{{ payment.id }}"
+        data-buttontext="Pay with Razorpay"
+        data-name= "The RK Group"
+        data-description= "Test Transaction"
+        data-prefill.name= "Kushal Kumar"
+        data-prefill.email= "am.kushal02@gmail.com"
+        data-prefill.contact= "9123686897"
+        data-theme.color= "{{ theme }}"
+    ></script>
+
+
+    <input type="hidden" name="hidden" custom="hidden Element">
+</form>
+
+{% endif %}
+
+</body>
+</html>
