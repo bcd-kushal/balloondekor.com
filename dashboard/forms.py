@@ -1,7 +1,13 @@
 from django import forms
 
 class LoginForm(forms.Form):
-    email_or_mobile = forms.CharField(max_length=100)
+    username = forms.CharField(
+                            max_length=100
+                        )
+    # email = forms.CharField(
+    #                         max_length=100,
+    #                         widget=forms.EmailInput()
+    #                     )
     login_password = forms.CharField(
                             widget=forms.PasswordInput()
                         )
@@ -22,5 +28,19 @@ class SigninForm(forms.Form):
     signin_password2 = forms.CharField(
                             widget=forms.PasswordInput()
                         )
+
+
+
+
+
+class PayForm(forms.Form):
+    itemname = forms.CharField(
+                            max_length=100
+                        )
+    # email = forms.CharField(
+    #                         max_length=100,
+    #                         widget=forms.EmailInput()
+    #                     )
+    price = forms.IntegerField(min_value=1)
 
 
