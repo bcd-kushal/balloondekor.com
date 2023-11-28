@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rk_src',
     'dashboard',
+    'rptest',
 ]
 
 MIDDLEWARE = [
@@ -133,3 +134,4 @@ ENV = {
     'RAZORPAY_API_KEY': 'rzp_test_i2Olh4B1BnBa6y',
     'RAZORPAY_KEY_SECRET': 'My7JEHHTovYfiSo4OlGUlVQg'
 }
+
