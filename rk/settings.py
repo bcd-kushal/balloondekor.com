@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
+# from dashboard.routers import MongoDBRouter
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -80,8 +81,14 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    },
+    # 'mongo': {
+    #     'ENGINE': 'mongoengine',
+    #     'NAME': BASE_DIR / 'db.mongoDB',
+    # },
 }
+
+DATABASE_ROUTERS = [ BASE_DIR / 'dashboard/routers.py' ]
 
 
 # Password validation
@@ -135,3 +142,6 @@ ENV = {
     'RAZORPAY_KEY_SECRET': 'My7JEHHTovYfiSo4OlGUlVQg'
 }
 
+# AUTHENTICATION_BACKENDS = (
+#     'django.contrib.auth.backends.ModelBackend',
+# )
