@@ -19,16 +19,24 @@ from .models import PaymentRecord as Rec
 
 from django.views.decorators.csrf import csrf_exempt
 
+from datetime import datetime
+
 # from .forms import SignUpForm
 
 # Create your views here.
 
+
+""" ===== GOTO DASHBOARD HOMEPAGE ===================== """
+def goto_dash_home(req):
+    if req.method == "GET":
+        return redirect("/dashboard/home/")
 
 
 """ ===== DASHBOARD HOMEPAGE ===================== """
 def dash_home(req):
     username = req.user.username or None
     degrees_symbol = "\u00b0"
+    today = datetime.now()
     #weather("Sydney")
     context={
         "company_name": "ABC" ,
@@ -39,9 +47,74 @@ def dash_home(req):
         "user_icon": username[0:1],
         "status": "green",
         "greeting": "Good Afternoon",
-        "greeting_details": f"Today is 24 November | 19{degrees_symbol}C"
+        "greeting_details": f"Today is {today.strftime('%d %b')} | 19{degrees_symbol}C"
     }
     return render(req,"dash_home.html",context)
+
+
+""" ===== DASHBOARD API ===================== """
+def dash_api(req):
+    username = req.user.username or None
+    context={
+        "company_name": "ABC" ,
+        "username": username,
+        "isLogin": "Logout",
+        "user_desc": "Full Stack Dev",
+        "theme_col": "197, 172, 244",
+        "user_icon": username[0:1],
+        "status": "green",
+    }
+    return render(req,"dash_api.html",context)
+
+
+
+""" ===== DASHBOARD DATABASE ===================== """
+def dash_db(req):
+    username = req.user.username or None
+    context={
+        "company_name": "ABC" ,
+        "username": username,
+        "isLogin": "Logout",
+        "user_desc": "Full Stack Dev",
+        "theme_col": "197, 172, 244",
+        "user_icon": username[0:1],
+        "status": "green",
+    }
+    return render(req,"dash_databases.html",context)
+
+
+
+""" ===== DASHBOARD DISCORD BOT ===================== """
+def dash_bot(req):
+    username = req.user.username or None
+    context={
+        "company_name": "ABC" ,
+        "username": username,
+        "isLogin": "Logout",
+        "user_desc": "Full Stack Dev",
+        "theme_col": "197, 172, 244",
+        "user_icon": username[0:1],
+        "status": "green",
+    }
+    return render(req,"dash_bot.html",context)
+
+
+
+""" ===== DASHBOARD ANALYTICS ===================== """
+def dash_analytics(req):
+    username = req.user.username or None
+    context={
+        "company_name": "ABC" ,
+        "username": username,
+        "isLogin": "Logout",
+        "user_desc": "Full Stack Dev",
+        "theme_col": "197, 172, 244",
+        "user_icon": username[0:1],
+        "status": "green",
+    }
+    return render(req,"dash_analytics.html",context)
+
+
 
 
 
@@ -236,7 +309,6 @@ def make_RZP_payment(req):
 
 
 
-
 @csrf_exempt
 def payment_success(req):
 
@@ -257,3 +329,18 @@ def payment_success(req):
 
 
     return render(req, "utils/dashboard/paymentSuccess.html", {})
+
+
+
+
+
+
+########[ DATABASES ]#######################################################
+""" ===== CREATE DATABASE ===================== """
+def create_database(req):
+
+    if req.method == "GET":
+        return render(req,"database_model/createDB/createDB.html",{
+            "loggedin_username": req.user.username or None
+        })
+    
