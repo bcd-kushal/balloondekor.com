@@ -1,6 +1,7 @@
 from django.db import models
 from django import forms
 from django.contrib.auth.models import User
+from mongoengine import Document, fields
 
 # Create your models here.
 """ 
@@ -15,6 +16,9 @@ class UserProfile(models.Model):
         return self.user.username """
 
 
+class MongoUserDB(Document):
+    field1 = fields.IntField()
+    field2 = fields.StringField()
 
 
 class PaymentRecord(models.Model):
