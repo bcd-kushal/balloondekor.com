@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Some Homepage</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{% static 'css/global.css' %} ">
+    <link rel="stylesheet" href="{% static 'css/dashhome.css' %}">
+    <link rel="stylesheet" href="{% static 'css/utils.css' %}">
+    <style>
+        
+        .profile_card:hover::before{
+            background: linear-gradient(90deg,rgba({{ theme_col }}, 0.45),transparent);
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="dashboard">
+
+
+
+        <div class="gridlayouts">
+            <div class="companyCon">
+                {% include 'utils/dashboard/companytitle.html' %}
+            </div>
+            <div class="headerCon">
+                {% include 'utils/dashboard/header.html' %}
+            </div>
+            <div class="sidebarCon">
+                {% include 'utils/dashboard/sidebar.html' %}
+            </div>
+
+            <!--------------------------------------------------------------------------->
+
+            <div class="mainCon">
+                <!-- <div class="bodyBox">
+                    No projects created... YET
+                </div> -->
+<!-- 
+                <div class="homepage">
+                    {% include 'pages/homepage.html' %}
+                </div>
+                <div class="databasepage">
+                    {% include 'pages/database.html' %}
+                </div>
+                <div class="apipage">
+                    {% include 'pages/api.html' %}
+                </div>
+                <div class="botpage">
+                    {% include 'pages/discordbot.html' %}
+                </div> -->
+                <div class="analyticspage">
+                    {% include 'pages/analytics.html' %}
+                </div><!-- 
+                <div class="coffeepage">
+                    {% include 'pages/homepage.html' %}
+                </div>
+
+ -->
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+
+    <!--=============================-->
+
+
+</body>
+</html>
