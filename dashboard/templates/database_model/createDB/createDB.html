@@ -38,29 +38,27 @@
             <!--------------------------------------------------------------------------->
 
             <div class="mainCon">
-                <!-- <div class="bodyBox">
-                    No projects created... YET
-                </div> -->
-<!-- 
-                <div class="homepage">
-                    {% include 'pages/homepage.html' %}
-                </div> -->
-                <div class="databasepage">
+
+                {% if selectDB %}
+                <div class="databasepage-create">
                     {% include 'database_model/createDB/utils/selectMakeDB.html' %}
-                </div><!-- 
-                <div class="apipage">
-                    {% include 'pages/api.html' %}
                 </div>
-                <div class="botpage">
-                    {% include 'pages/discordbot.html' %}
+                {% endif %}
+
+
+                {% if makeSQL %}
+                <div class="databasepage-create">
+                    {% include 'database_model/createDB/utils/makeSQLdb.html' %}
                 </div>
-                <div class="analyticspage">
-                    {% include 'pages/analytics.html' %}
+                {% endif %}
+
+
+                {% if makeNoSQL %}
+                <div class="databasepage-create">
+                    {% include 'database_model/createDB/utils/makeNoSQLdb.html' %}
                 </div>
-                <div class="coffeepage">
-                    {% include 'pages/homepage.html' %}
-                </div>
- -->
+                {% endif %}
+            
 
             </div>
         </div>

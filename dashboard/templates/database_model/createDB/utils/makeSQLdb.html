@@ -1,0 +1,296 @@
+<div class="createDBpage" style="border-color: rgba(255,255,255,0.5);">
+
+
+    <div class="selectDBpanel">
+
+        <form action="{% url 'SQL-create' %}" id="SQLform" method="post">
+        {% csrf_token %}
+            <div class="newDbName">
+                <div class="newL">Database Name</div>
+                <div class="newR">
+                    <input type="text" name="db_name" id="a">
+                    <div class="msgSection dbtitle"></div>
+                </div>
+            </div>
+            
+            <div class="newDbName" style="margin-top: 40px;">
+                <div class="newL" style="height: 110px">Tuples</div>
+                <div class="newR" style="height: 110px">
+                    <textarea name="db_schema" id="createSQLtextarea" cols="30" rows="2">
+
+                    </textarea>
+                    <div class="msgSection dbtuples"></div>
+                </div>
+            </div>
+            
+            <div class="newDbName" style="margin-top: 70px;">
+                <div class="newL">Primary Key is </div>
+                <div class="newR">
+                    <input type="text" name="db_pk" id="c">
+                    <div class="msgSection dbpk"></div>
+                </div>
+            </div>
+            
+            <div class="newDbName">
+                <div class="newL">Foreign Key is </div>
+                <div class="newR">
+                    <input type="text" name="db_fk" id="d">
+                    <div class="msgSection dbfk"></div>
+                </div>
+            </div>
+
+            <div class="SQLSubmitBtn">
+                <div class="msgSection dberr"></div>
+                <button type="submit" onclick="return schemaCheck()">Create</button>
+            </div>
+
+        </form> 
+    </div>
+
+    <div class="selectDBdescription">
+        <div class="imgbox">
+            <!-- IMAGE LMAO -->
+        </div>
+        <div class="descriptionArea">
+            <div class="descTitle">
+                Define Your SQL Schema
+            </div>
+            <div class="descDesc">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda illo necessitatibus quasi, repellendus consequuntur perspiciatis eveniet magnam at fugiat deserunt culpa, laboriosam ipsa, eos maxime totam veniam eaque vero dignissimos.
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+<script>
+
+    const EXISTING_DB_NAMES = "{{ databases }}".split(',');
+
+    let dbTitle = document.getElementById("a");
+    let dbTuples = document.getElementById("createSQLtextarea");
+    let dbPrimKey = document.getElementById("c");
+    let dbForgnKey = document.getElementById("d");
+
+    let dbname_valid = false;
+    let dbTuples_valid = false;
+    let dbpk_valid = false;
+    let dbfk_valid = true;
+
+
+    
+    dbTitle.addEventListener( "keyup", () => {
+        const CURR_STR = document.getElementById("a").value;
+        const titlemsg  = document.getElementsByClassName("dbtitle")[0];
+        
+        if(CURR_STR == ''){
+            titlemsg.textContent = "";
+            return;
+        }
+
+        function isValid(){
+            const PATTERN = /^[a-zA-Z][a-zA-Z0-9_]*$/;
+
+            if(!PATTERN.test(CURR_STR)){
+                dbname_valid = false;
+                return {
+                    "text_col": "red",
+                    "msg": "Database name should start with letter and cannot have spaces or special characters (except underscore)"
+                }
+            }
+
+            for(let i=0;i<EXISTING_DB_NAMES.length;i++)
+                if(EXISTING_DB_NAMES[i] == CURR_STR){
+                    dbname_valid = false;
+                    return {
+                        "text_col": "red",
+                        "msg": "An existing database already uses that name"
+                    }
+                }
+
+                    
+            dbname_valid = true;
+
+            return {
+                "text_col": "green",
+                "msg": `${CURR_STR} is available!`
+            }
+        }
+
+
+        const RES = isValid();
+
+        titlemsg.textContent = RES.msg;
+        titlemsg.style.color = RES.text_col;
+
+        
+
+    });
+
+
+
+    dbTuples.addEventListener( "keyup", () => {
+        const CURR_STR = document.getElementById("createSQLtextarea").value;
+        const titlemsg  = document.getElementsByClassName("dbtuples")[0];
+        
+        if(CURR_STR == ''){
+            titlemsg.textContent = "";
+            checkPK();
+            checkFK();
+            return;
+        }
+
+        function isValid(x,arr){
+            if(x==''){
+                checkPK();
+                checkFK();
+                return false;
+            }
+
+            const PATTERN = /^[a-zA-Z][a-zA-Z_]*$/;
+
+            if(!PATTERN.test(x)){
+                checkPK();
+                checkFK();
+                return false;
+            }
+
+            var uniqueElements = {};
+            for (let i = 0; i < arr.length; i++) {
+    
+                if (uniqueElements[arr[i]]) {
+                    checkPK();
+                    checkFK();
+                    return false;
+                }
+
+                uniqueElements[arr[i]] = true;
+            }
+
+            checkPK();
+            checkFK();
+            return true;
+        }
+
+        const tupleNames = CURR_STR.split('\n');
+        let RES = true;
+
+        for(let i=0;i<tupleNames.length;i++){
+            RES = RES & isValid(tupleNames[i],tupleNames,i);
+            if(!RES){
+                titlemsg.textContent = "Tuples should be distinct, no empty lines and follow same rules as database title";
+                titlemsg.style.color = "red";
+                dbTuples_valid = false;
+                checkPK();
+                checkFK();
+                return;
+            }
+
+        }
+
+        titlemsg.textContent = "valid tuples!";
+        titlemsg.style.color = "green";
+        checkPK();
+        checkFK();
+        dbTuples_valid = true;
+        
+
+    });
+
+
+
+
+    dbPrimKey.addEventListener( "keyup", checkPK );
+
+    dbForgnKey.addEventListener( "keyup", checkFK );
+
+
+
+    function checkPK(){
+        const CURR_STR = document.getElementById("c").value;
+        const titlemsg  = document.getElementsByClassName("dbpk")[0];
+        
+        if(CURR_STR == ''){
+            titlemsg.textContent = "";
+            dbpk_valid = false;
+            return;
+        }
+
+        if(!dbTuples_valid){
+            titlemsg.textContent = "tuples aren't properly defined";
+            titlemsg.style.color = "red";
+            dbpk_valid = false;
+            return;
+        }
+
+        const tupleNames = document.getElementById("createSQLtextarea").value.split('\n');
+
+        for(let i=0;i<tupleNames.length;i++){
+            if(tupleNames[i] == CURR_STR){
+                titlemsg.textContent = "defined!";
+                titlemsg.style.color = "green";
+                dbpk_valid = true;
+                return;
+            }
+        }
+
+        
+        titlemsg.textContent = "primary key doesn't match any tuple";
+        titlemsg.style.color = "red";
+        dbpk_valid = false;
+    
+    }
+
+    
+    function checkFK(){
+        const CURR_STR = document.getElementById("d").value;
+        const titlemsg  = document.getElementsByClassName("dbfk")[0];
+        
+        if(CURR_STR == ''){
+            titlemsg.textContent = "";
+            dbfk_valid = true;
+            return;
+        }
+
+        if(!dbTuples_valid){
+            titlemsg.textContent = "tuples aren't properly defined";
+            titlemsg.style.color = "red";
+            dbfk_valid = false;
+            return;
+        }
+
+        const tupleNames = document.getElementById("createSQLtextarea").value.split('\n');
+
+        for(let i=0;i<tupleNames.length;i++){
+            if(tupleNames[i] == CURR_STR){
+                titlemsg.textContent = "defined!";
+                titlemsg.style.color = "green";
+                dbfk_valid = true;
+                return;
+            }
+        }
+
+        
+        titlemsg.textContent = "foreign key doesn't match any tuple";
+        titlemsg.style.color = "red";
+        dbfk_valid = false;
+    
+    }
+
+
+
+    function schemaCheck(){
+        if(dbTuples_valid & dbpk_valid & dbfk_valid & dbname_valid){
+            return true;
+        }
+        
+        document.getElementsByClassName("dberr")[0].textContent = "all fields are not valid";
+        setTimeout(() => {
+            document.getElementsByClassName("dberr")[0].textContent = "";
+        }, 3.5*1000 );
+        return false;
+    }
+
+</script>

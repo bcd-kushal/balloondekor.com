@@ -1,1 +1,55 @@
-SQL or NoSQL ???
+<div class="createDBpage">
+
+
+    <div class="selectDBpanel">
+
+        <form action="{% url 'database-create' %}" id="selectDBForm" method="post">
+        {% csrf_token %}
+        <button class="SQLbox" type="submit" name="SQLbox">
+            <div class="dbTypeTitle">SQL</div>
+            <div class="dbTypeDesc">
+                <ul>
+                    <li>Relational</li>
+                    <li>Scalable</li>
+                    <li>Primary & Foreign Keys</li>
+                </ul>
+            </div>
+            <div class="tags">
+                <div class="tag" style="background: rgba(65,197,209,0.13);border: 1.2px solid rgb(65, 197, 209);color: rgb(65, 197, 209);;">MySQL</div>
+                <div class="tag" style="background: rgba(65,197,120,0.13);border: 1.2px solid rgb(65, 197, 120);color: rgb(65, 197, 120);">PostgreSQL</div>
+            </div>
+        </button>
+        <button class="NoSQLbox" type="submit" name="NoSQLbox">
+            <div class="dbTypeTitle">NoSQL</div>
+            <div class="dbTypeDesc">
+                <ul>
+                    <li>Object-oriented</li>
+                    <li>Fast for quick data</li>
+                    <li>Schema-less</li>
+                </ul>
+            </div>
+            <div class="tags">
+                <div class="tag" style="background: rgba(14, 134, 36, 0.13);border: 1.2px solid rgb(14, 134, 36);color: rgb(14, 134, 36);">MongoDB</div>
+                <div class="tag" style="background: rgba(237, 237, 237, 0.13);border: 1.2px solid rgb(237, 237, 237); color: rgb(237, 237, 237);">Cassandra</div>
+                <div class="tag" style="background: rgba(148, 66, 152, 0.13);border: 1.2px solid rgb(148, 66, 152);color: rgb(148, 66, 152);">GraphQL</div>
+            </div>
+        </button>
+        </form> 
+    </div>
+
+    <div class="selectDBdescription">
+        <div class="imgbox">
+            <!-- IMAGE LMAO -->
+        </div>
+        <div class="descriptionArea">
+            <div class="descTitle">
+                Pick your database
+            </div>
+            <div class="descDesc">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda illo necessitatibus quasi, repellendus consequuntur perspiciatis eveniet magnam at fugiat deserunt culpa, laboriosam ipsa, eos maxime totam veniam eaque vero dignissimos.
+            </div>
+        </div>
+    </div>
+
+</div>
+
