@@ -35,7 +35,7 @@ urlpatterns = [
 
 
     path('dashboard/database/create/', dv.create_database, name='database-create'),
-    path('dashboard/database/<int:db_id>/', dv.create_database, name='database-1'),
+    path('dashboard/database/sql/', dv.create_SQL_DB, name='SQL-create'),
 
 
 
