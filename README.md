@@ -6,3 +6,14 @@
 <img style="height:24px" title="tailwind" src="https://user-images.githubusercontent.com/25181517/202896760-337261ed-ee92-4979-84c4-d4b829c7355d.png"/> &nbsp;
 <img style="height:28px" title="nginx" src="https://download.logo.wine/logo/Nginx/Nginx-Logo.wine.png"/> &nbsp;
 <img style="height:25px" title="redis" src="https://user-images.githubusercontent.com/25181517/182884894-d3fa6ee0-f2b4-4960-9961-64740f533f2a.png"/> &nbsp;
+
+
+<hr>
+
+## :book: License
+
+This project is licensed under the MIT License - see the <a href=''>LICENSE</a> file for details.
+
+<hr>
+
+<h3><img title="Kushal-Kumar" width="17" src="https://github.com/bcd-kushal/bcd-kushal/blob/main/icons/dark/filled/kushalkumar_bg_dark.png"/>&nbsp;Kushal Kumar 2024 • All rights reserved </h3>
