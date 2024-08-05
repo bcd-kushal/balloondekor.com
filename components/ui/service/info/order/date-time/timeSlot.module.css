@@ -1,0 +1,44 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1.2rem;
+  padding: 1.3rem 1rem 1.3rem 1.3rem;
+  border: 1.2px solid #12121235;
+  border-radius: 8px;
+  cursor: pointer;
+  transition:
+    border-color 250ms ease,
+    color 250ms ease;
+}
+
+.container:hover {
+  border-color: #121212;
+}
+
+.active {
+  border-color: #cd378c !important;
+  color: #cd378c;
+  background: #cd378c15;
+}
+
+.label {
+  font-size: 1.7rem;
+  font-weight: 400;
+  text-align: center;
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    padding: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0.7rem 1.65rem;
+  }
+  .label {
+    font-size: 1.8rem;
+  }
+}

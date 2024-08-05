@@ -1,0 +1,39 @@
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1.5rem 1rem;
+  height: 100%;
+  border-radius: 2rem;
+}
+
+.closeIcon {
+  position: absolute;
+  top: 20px;
+  right: 0;
+  transform: translateX(-28px);
+
+  cursor: pointer;
+  opacity: 0.4;
+  border-radius: 999px;
+  padding: 10px;
+  transition: 0.3s;
+}
+
+.closeIcon:hover {
+  background: #12121235;
+  opacity: 0.8;
+}
+
+@media screen and (max-width: 480px) {
+  .closeIcon {
+    top: 5px;
+    right: -20px;
+  }
+  .container {
+    justify-content: space-between;
+  }
+}

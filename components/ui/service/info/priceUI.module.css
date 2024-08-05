@@ -1,0 +1,78 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  width: 100%;
+  margin: 10px 0;
+}
+
+.priceDiscountContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0;
+}
+
+.priceContainer {
+  display: flex;
+  align-items: last baseline;
+  justify-content: flex-start;
+  gap: 1rem;
+
+  width: 100%;
+}
+
+.priceInfo {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0.25rem;
+
+  color: #212121;
+
+  font-weight: 500;
+}
+
+.currency {
+  padding-top: 0.25rem;
+
+  font-size: 1.6rem;
+}
+
+.price {
+  font-size: 2.5em;
+}
+
+.disclaimer {
+  color: #3e3e3e;
+
+  font-size: 1.45rem;
+  font-weight: 300;
+  text-transform: capitalize;
+}
+
+.mrpContainer {
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-start;
+  gap: 1rem;
+
+  width: 100%;
+}
+
+.mrp {
+  color: #3e3e3e;
+
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+.discount {
+  color: #4f3267;
+
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}

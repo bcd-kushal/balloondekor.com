@@ -1,0 +1,77 @@
+.container {
+  --title-size: 1.5rem;
+  --content-size: 1.75rem;
+
+  width: 100%;
+
+  border: none;
+}
+
+.error {
+  border-color: #f00 !important;
+}
+
+.title {
+  margin-bottom: 0.5rem;
+
+  color: #333;
+
+  font-size: var(--title-size);
+  text-transform: capitalize;
+}
+
+.required {
+  margin-left: 0.5rem;
+
+  color: #ff0000;
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 1rem;
+
+  width: 100%;
+
+  font-size: var(--content-size);
+  text-align: center;
+
+  overflow: hidden;
+}
+
+.input:focus-within {
+  outline: none;
+}
+
+.editors {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* gap: 0.5rem; */
+
+  width: 100%;
+}
+
+.addBtn {
+  max-width: 15rem;
+  height: 4rem;
+
+  font-size: 1.75rem;
+  font-weight: 600;
+}
+
+.errorMessage {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.5rem;
+
+  height: 2.2rem;
+
+  padding: 0.5rem 0;
+
+  font-size: 1.2rem;
+}

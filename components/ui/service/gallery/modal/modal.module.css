@@ -1,0 +1,36 @@
+.container {
+  position: relative;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 86.5% 10%;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+
+  width: 90vw;
+  height: 90svh;
+
+  padding: 2rem;
+
+  border-radius: 2rem;
+
+  background-color: #d8d8d8;
+
+  z-index: 999;
+}
+
+.closeIcon {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+
+  cursor: pointer;
+
+  z-index: 9999;
+}
+
+.heroContainer {
+  width: 100%;
+  height: 100%;
+}

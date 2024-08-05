@@ -1,0 +1,20 @@
+.heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-start;
+  gap: 0.5rem;
+
+  color: #282828;
+
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.trendingLinks {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+
+  padding: 2rem 0rem 1rem;
+}

@@ -1,0 +1,55 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: 1px solid #12121220;
+  border-radius: 1rem;
+}
+
+.container:hover {
+  border-color: #12121290;
+}
+
+.active {
+  border-color: #4f326740 !important;
+  color: #50187d !important;
+  background: #8f74a625 !important;
+}
+
+.image {
+  height: 10rem;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  scale: 1.01;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+  width: 100%;
+  padding: 0.5rem 0.85rem 0.7rem;
+}
+
+.noPrice {
+  text-align: center;
+}
+
+.label {
+  width: 100%;
+
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+
+.price {
+  font-size: 1.25rem;
+  font-weight: 600;
+}

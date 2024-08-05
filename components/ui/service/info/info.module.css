@@ -1,0 +1,43 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: start;
+  gap: 2rem;
+  position: relative;
+  width: 100%;
+}
+
+.detailsHolder,
+.namePriceHolder {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.detailsHolder > * {
+  width: 100%;
+}
+
+.detailsHolder > section section {
+  border: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    padding: 0rem 0;
+  }
+}
+
+@media screen and (max-width: 635px) {
+  .container {
+    margin-top: 1.1rem;
+  }
+
+  .detailsHolder,
+  .namePriceHolder {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}

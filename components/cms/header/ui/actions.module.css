@@ -1,0 +1,61 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 14px;
+  grid-area: actions;
+}
+
+.action {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  color: inherit;
+  font-size: 1.25rem;
+  padding: 6px;
+
+  cursor: pointer;
+}
+
+.searchBtn {
+  display: none;
+
+  background-color: transparent;
+  border: none;
+  padding: 6px;
+}
+
+.searchBtn > img {
+  height: 3.2rem;
+  width: 3.2rem;
+}
+@media only screen and (max-width: 768px) {
+  .container {
+    gap: 1.4rem;
+    padding-right: 1rem;
+  }
+
+  .action > span {
+    display: none;
+  }
+
+  .action:nth-child(3) {
+    display: none;
+  }
+
+  .searchBtn {
+    display: block;
+  }
+}
+@media only screen and (max-width: 630px) {
+  .container {
+    gap: 1.15rem;
+  }
+
+  .action > img,
+  .searchBtn > img {
+    width: 26px;
+  }
+}

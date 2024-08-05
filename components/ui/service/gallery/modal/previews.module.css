@@ -1,0 +1,37 @@
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+.previews {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+
+  width: 100%;
+  height: 100%;
+}
+
+.preview {
+  position: relative;
+
+  height: 100%;
+  aspect-ratio: 1 / 1;
+
+  border-radius: 1rem;
+
+  cursor: pointer;
+  overflow: hidden;
+
+  transition: transform 250ms ease;
+}
+
+.active {
+  transform: scale(1.1);
+}
+
+.previewImage {
+  object-fit: cover;
+  object-position: center;
+}

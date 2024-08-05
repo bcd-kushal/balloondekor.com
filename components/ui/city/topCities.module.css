@@ -1,0 +1,26 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 1rem 0;
+}
+
+.heading {
+  font-size: 2rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  width: 100%;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid #00000033;
+  text-align: center;
+}
+
+.cities {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}

@@ -1,0 +1,148 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  width: 100%;
+  height: auto;
+
+  padding: 1rem 2rem;
+
+  background-color: transparent;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0.5rem;
+
+  width: 100%;
+
+  padding: 0.5rem;
+}
+
+.heading {
+  color: #000;
+
+  font-size: 2.5rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.subHeading {
+  color: #282828;
+
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+
+.linkImagesContainer {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+
+  width: 100%;
+
+  overflow: hidden;
+}
+
+.buttonLeft,
+.buttonRight {
+  margin: 0 0.5rem;
+  cursor: pointer;
+  z-index: 90 !important;
+}
+
+.disabled {
+  opacity: 0.5;
+  cursor: default;
+  pointer-events: none;
+}
+
+.scrollContainer {
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  width: 100%;
+}
+
+.scrollContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.linkImages {
+  display: flex;
+  align-items: center;
+  min-width: 100%;
+  gap: 3rem;
+  overflow-x: scroll;
+
+  padding: 0 1rem;
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.linkImages::-webkit-scrollbar {
+  display: none;
+}
+
+.linkImage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-grow: 1;
+
+  min-width: 20rem;
+
+  padding: 1rem 0;
+
+  text-align: center;
+}
+
+.imageContainer {
+  aspect-ratio: 1/1;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image {
+  border-radius: 50%;
+  /* scale: 1.8; */
+}
+
+.label {
+  color: #282828;
+
+  font-size: 1.75rem;
+  font-weight: 400;
+}
+
+@media only screen and (max-width: 768px) {
+  .linkImage {
+    min-width: 15rem;
+  }
+
+  .buttonRight,
+  .buttonLeft {
+    display: none;
+  }
+
+  .label {
+    font-size: 1.4em;
+  }
+
+  .container {
+    padding: 1rem;
+  }
+}

@@ -1,0 +1,43 @@
+.layouts {
+  display: grid;
+  grid-template-columns: repeat(
+    4,
+    minmax(70px, 1fr)
+  );
+  gap: 1px;
+}
+
+.layouts > * {
+  width: auto;
+  margin-bottom: 10px;
+  transition: 0.3s;
+  padding: 10px 6px 8px;
+  border-radius: 10px;
+}
+
+.layouts > *:hover {
+  background: #94a5b332;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+@media screen and (max-width: 800px) {
+  .layouts {
+    grid-template-columns: repeat(
+      2,
+      minmax(150px, 1fr)
+    );
+  }
+}

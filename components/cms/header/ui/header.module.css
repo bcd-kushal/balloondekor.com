@@ -1,0 +1,171 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: start;
+  padding: 0 1rem;
+  margin-bottom: 10px;
+}
+
+.topSection {
+  display: grid;
+  grid-template-areas: "logo location search actions";
+  padding-bottom: 20px;
+  padding: 2rem 0 0.5rem 1rem;
+}
+
+.bottomSection {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #fff;
+  padding: 0.5rem 0 0;
+  margin: 0 0 1rem;
+}
+
+.topSection,
+.bottomSection {
+  width: 100%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.userHeader {
+  display: none;
+}
+
+.location {
+  grid-area: location;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+@media only screen and (min-width: 1200px) {
+  .topSection {
+    padding-left: 0;
+  }
+}
+
+@media only screen and (max-width: 1140px) {
+  .topSection {
+    grid-template-areas:
+      "logo location actions"
+      "search search search";
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .topSection {
+    grid-template-areas:
+      "logo actions"
+      "search search "
+      "location location";
+    padding: 8px 0 0;
+  }
+
+  .bottomSection {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    height: 100vh;
+    width: 90%;
+    overflow-y: auto;
+    z-index: 999;
+    animation: toLeft 0.5s ease 0s 1 forwards;
+  }
+
+  @keyframes toLeft {
+    from {
+      transform: translateX(0%);
+    }
+    to {
+      transform: translateX(-150%);
+    }
+  }
+
+  .container {
+    padding: 1rem 0rem 0rem;
+  }
+
+  .toRight {
+    animation: toRight 0.5s ease 0s 1 forwards;
+  }
+
+  @keyframes toRight {
+    from {
+      transform: translateX(-150%);
+    }
+    to {
+      transform: translateX(0%);
+    }
+  }
+
+  .userHeader {
+    position: relative;
+    display: flex;
+    width: 100%;
+    padding: 4rem 2rem;
+    background-color: #f3f7f8;
+  }
+
+  .closeBtn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2.5em;
+  }
+
+  .userIcon {
+    display: inline-block;
+    padding: 0.8rem;
+    background-color: #fff;
+    border-radius: 50%;
+  }
+
+  .userIcon > img {
+    height: 4rem;
+    width: 4rem;
+    opacity: 0.7;
+  }
+
+  .userMessage {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .message {
+    color: #212121;
+    font-size: 2em;
+    font-weight: 500;
+    opacity: 0.9;
+  }
+
+  .subMessage {
+    color: #828282;
+    font-size: 1.4em;
+    font-weight: 400;
+    margin-right: 2em;
+  }
+
+  .loginBtn {
+    color: #000;
+    background-color: #fff;
+    font-size: 1.5em;
+    font-weight: 400;
+    padding: 0.7rem 1.5rem;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 1rem;
+  }
+
+  .location > * {
+    padding-left: 16px;
+  }
+
+  .location {
+    margin-top: 5px;
+  }
+}

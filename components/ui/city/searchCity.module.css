@@ -1,0 +1,33 @@
+.container {
+  width: calc(100% - 10px);
+  transition: 0.35s;
+  align-self: flex-start;
+}
+
+.container:hover .search {
+  border-color: #0007;
+  transition: 0.35s;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+  padding: 0.5rem;
+  border-bottom: 0.1rem solid #00000035;
+  transition: 0.35s;
+  cursor: text;
+}
+
+.searchInput {
+  width: 100%;
+  border: none;
+  font-size: 1.75rem;
+  font-weight: 400;
+}
+
+.searchInput:focus {
+  outline: none;
+}

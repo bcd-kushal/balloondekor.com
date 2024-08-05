@@ -1,0 +1,31 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+.link {
+  width: max-content;
+
+  color: #000;
+
+  font-size: 1.5rem;
+}
+
+.container:hover .link {
+  color: #d43790;
+}
+
+.tag {
+  padding: 0.1rem 0.75rem;
+
+  border-radius: 1rem;
+
+  color: #fff;
+
+  font-size: 1rem;
+  font-weight: 700;
+  font-variant: small-caps;
+  text-transform: uppercase;
+}

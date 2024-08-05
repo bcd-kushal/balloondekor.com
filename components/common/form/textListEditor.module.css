@@ -1,0 +1,93 @@
+.container {
+  --title-size: 1.5rem;
+  --content-size: 1.75rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1rem;
+
+  width: 100%;
+
+  padding: 1rem;
+
+  border-radius: 1rem;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.srNo {
+  font-size: var(--title-size);
+}
+
+.closeBtn {
+  background-color: #fff;
+
+  border-radius: 50%;
+
+  opacity: 0.5;
+
+  transition: opacity 250ms ease;
+}
+
+.closeBtn:hover {
+  opacity: 1;
+}
+
+.inputsContainer {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  width: 100%;
+}
+
+.textInput {
+  width: 100%;
+
+  padding: 0.75rem 1rem;
+
+  border-width: 0.2rem;
+  border-style: solid;
+  border-color: #000;
+  border-radius: 1rem;
+
+  background-color: transparent;
+
+  font-size: var(--content-size);
+  text-align: center;
+}
+
+.textInput:focus {
+  outline: none;
+}
+
+.textareaInput {
+  width: 100%;
+
+  padding: 1rem;
+
+  border-width: 0.2rem;
+  border-style: solid;
+  border-color: #000;
+  border-radius: 1rem;
+
+  font-family: inherit;
+  font-size: var(--content-size);
+
+  resize: none;
+}
+
+.textareaInput:focus {
+  outline: none;
+}

@@ -1,0 +1,148 @@
+.ck_custom_container {
+  position: relative;
+}
+
+.ck_fullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100vw !important;
+  height: 100svh;
+
+  z-index: 9999;
+}
+
+.ck_fullscreen .ck-editor__top {
+  max-width: 100vw !important;
+}
+
+.ck_fullscreen .ck-sticky-panel {
+  min-width: 100%;
+  height: 100svh;
+}
+
+.ck_fullscreen .ck-editor__main {
+  height: 100svh;
+}
+
+.ck_fullscreen .ck-editor__editable {
+  max-width: 100vw !important;
+  min-height: calc(100svh - 4rem);
+
+  margin-bottom: 4rem;
+}
+
+.ck_fullscreen .ck_fullscreen_toggle {
+  z-index: 999;
+}
+
+.ck_fullscreen_toggle {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 4rem;
+  height: 4rem;
+
+  background-color: transparent;
+
+  opacity: 0.5;
+  z-index: 10;
+  cursor: pointer;
+
+  transition: opacity 100ms linear;
+}
+
+.ck_fullscreen_toggle:hover {
+  opacity: 1;
+}
+
+/* .ck-editor__top {
+  max-width: 35vw !important;
+} */
+
+.ck-sticky-panel,
+.ck-editor__main {
+  height: 30rem;
+
+  background-color: #fff;
+}
+
+.ck-editor__main {
+  overflow-y: scroll;
+}
+
+.ck-editor__main::-webkit-scrollbar {
+  display: none;
+}
+
+.ck-editor__main {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.ck-editor__editable {
+  position: relative;
+
+  width: 100%;
+  /* max-width: 35vw !important; */
+  min-height: 20rem;
+
+  padding: 0 3rem !important;
+}
+
+.ck-powered-by {
+  display: none;
+}
+
+.ck-editor {
+  box-shadow:
+    0px 0px 5.3px rgba(0, 0, 0, 0.028),
+    0px 0px 17.9px rgba(0, 0, 0, 0.042),
+    0px 0px 80px rgba(0, 0, 0, 0.07);
+  border-radius: 10px;
+
+  font-size: 1.5rem;
+}
+
+.ck-editor h2 {
+  font-size: 2.25rem;
+}
+
+.ck-editor h3 {
+  font-size: 2rem;
+}
+
+.ck-editor h4 {
+  font-size: 1.75rem;
+}
+
+.ck-toolbar {
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  border-radius: 10px 10px 0px 0px !important;
+}
+
+.ck-editor__editable {
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  border-radius: 0px 0px 10px 10px !important;
+}
+
+/* to disable sticky toolbar */
+.ck
+  .ck-sticky-panel
+  .ck-sticky-panel__content_sticky {
+  position: static !important;
+}
+
+.ck-sticky-panel__placeholder {
+  display: none !important;
+}
+
+.ck .ck-sticky-panel__content {
+  width: 100% !important;
+}

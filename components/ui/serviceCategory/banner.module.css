@@ -1,0 +1,11 @@
+.container {
+  width: 100%;
+  padding: 1rem;
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+  border-radius: 1rem;
+  object-fit: cover;
+}

@@ -1,0 +1,28 @@
+.container {
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-start;
+  gap: 4px;
+}
+
+.price {
+  margin-right: 4px;
+
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.mrp {
+  color: #3e3e3e;
+
+  font-size: 1.4rem;
+}
+
+.discount {
+  margin-left: 3px;
+
+  color: #9f2b68;
+
+  font-size: 1.35rem;
+  font-weight: 700;
+}

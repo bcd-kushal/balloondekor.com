@@ -1,0 +1,26 @@
+.container {
+  --title-size: 1.5rem;
+  --content-size: 1.75rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+
+  width: 100%;
+
+  border: none;
+}
+
+.container .title {
+  color: #333;
+
+  font-size: var(--title-size);
+  text-transform: capitalize;
+}
+
+.container .required {
+  margin-left: 0.5rem;
+
+  color: #ff0000;
+}

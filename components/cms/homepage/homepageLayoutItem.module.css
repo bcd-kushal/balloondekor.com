@@ -1,0 +1,40 @@
+.container {
+  position: relative;
+  display: grid;
+  align-items: stretch;
+  justify-content: stretch;
+}
+
+.container > * {
+  grid-row-start: 1;
+  grid-column-start: 1;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+  width: 100%;
+  border: 0.3rem solid #6c6c6c;
+  opacity: 0;
+  transition:
+    background-color 250ms ease,
+    opacity 250ms ease;
+  z-index: 99;
+}
+
+.controls:hover {
+  background-color: rgba(255, 255, 255, 0.75);
+  opacity: 1;
+}
+
+.icon {
+  cursor: pointer;
+}
+
+.layoutsContainer {
+  width: 100%;
+  position: relative;
+  overflow-x: hidden;
+}

@@ -1,0 +1,37 @@
+.categories {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+  width: 100%;
+  border-bottom: 0.1rem solid #00000022;
+  overflow-x: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  outline: none;
+}
+
+.categories::-webkit-scrollbar {
+  display: none;
+}
+
+.category {
+  margin-top: 1.2rem;
+  padding: 1rem 1.75rem;
+  border: none;
+  border-bottom-width: 0.3rem;
+  border-bottom-style: solid;
+  border-bottom-color: transparent;
+  background-color: inherit;
+  font-size: 1.75rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: border-color 100ms ease;
+}
+
+.active {
+  border-bottom-color: #4f3267;
+  outline: none;
+}

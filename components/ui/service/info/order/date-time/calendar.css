@@ -1,0 +1,122 @@
+.react-calendar {
+  width: 100%;
+  height: auto;
+
+  /* padding: 4rem;
+  padding-bottom: 6rem; */
+  margin: 0;
+  padding: 0;
+
+  border: none;
+  /* border-radius: 2rem; */
+
+  font-family: inherit;
+
+  /* overflow: hidden; */
+}
+
+.react-calendar__navigation {
+  height: auto;
+
+  margin-bottom: 0;
+  padding-bottom: 2rem;
+}
+
+.react-calendar__navigation__label__labelText {
+  font-size: 1.75rem;
+  font-weight: 600;
+}
+
+.react-calendar__navigation button {
+  font-size: 2rem;
+
+  opacity: 1;
+
+  transition: opacity 250ms ease;
+}
+
+.react-calendar__navigation button:disabled {
+  opacity: 0;
+}
+
+.react-calendar__navigation button:enabled:hover,
+.react-calendar__navigation button:enabled:focus {
+  background-color: inherit;
+}
+
+.react-calendar__navigation__prev2-button,
+.react-calendar__navigation__next2-button {
+  display: none;
+}
+
+.react-calendar__month-view__weekdays {
+  /* gap: 1rem; */
+
+  width: 100%;
+
+  margin-bottom: 1rem;
+  padding: 1rem 0;
+
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+
+.react-calendar__month-view__days {
+  gap: 1rem 0;
+}
+
+.react-calendar__month-view__weekdays__weekday {
+  padding: 0;
+}
+
+.react-calendar__month-view__days__day--weekend {
+  color: inherit;
+}
+
+.react-calendar__month-view__days__day--neighboringMonth,
+.react-calendar__decade-view__years__year--neighboringDecade,
+.react-calendar__century-view__decades__decade--neighboringCentury {
+  color: #757575 !important;
+}
+
+.react-calendar__tile {
+  width: min-content;
+
+  padding: 1rem;
+
+  border-radius: 1rem;
+
+  background: none;
+
+  font: inherit;
+  font-size: 1.5rem;
+  text-align: center;
+  line-height: initial;
+}
+
+.react-calendar__tile:enabled:hover,
+.react-calendar__tile:enabled:focus {
+  background-color: inherit;
+}
+
+.react-calendar__tile--now {
+  background: inherit;
+}
+
+.react-calendar__tile--now:enabled:hover,
+.react-calendar__tile--now:enabled:focus {
+  background: inherit;
+}
+
+.react-calendar__tile--active {
+  background: #d1368f;
+  color: white;
+}
+
+.react-calendar__tile--active:enabled:hover,
+.react-calendar__tile--active:enabled:focus {
+  background: #d1368f;
+}

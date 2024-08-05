@@ -1,0 +1,60 @@
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* width: 100%; */
+
+  border-width: 0.2rem;
+  border-style: solid;
+
+  padding: 0.5rem 1rem;
+
+  border-radius: 1rem;
+
+  text-transform: capitalize;
+  text-align: center;
+  font-size: 1.75rem;
+  font-weight: 600;
+  font-family: inherit;
+
+  cursor: pointer;
+}
+
+.iconImg {
+  margin-right: 1rem;
+}
+
+.primary {
+  background-color: #000;
+  color: #fff;
+  border-color: #000;
+}
+
+.secondary {
+  background-color: transparent;
+  color: #000;
+  border-color: #000;
+  transition: all ease 0.5s;
+}
+.secondary:hover {
+  background-color: #31112c;
+  color: #fff;
+}
+.danger {
+  background-color: #f00;
+  color: #fff;
+  border-color: #f00;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+}
+
+.icon .iconImg {
+  margin-right: 0;
+}

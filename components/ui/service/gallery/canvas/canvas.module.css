@@ -1,0 +1,10 @@
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  gap: 1rem;
+  width: 100%;
+  overflow: hidden;
+}

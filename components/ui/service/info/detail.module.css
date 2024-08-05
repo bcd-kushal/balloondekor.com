@@ -1,0 +1,13 @@
+.container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 1rem;
+
+  width: 100%;
+}
+
+.content {
+  font-size: 1.5rem;
+  text-transform: capitalize;
+}

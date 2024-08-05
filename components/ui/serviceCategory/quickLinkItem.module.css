@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.15rem 1.5rem;
+  border: 1.5px solid #a5089d45;
+  border-radius: 1rem;
+  transition: 0.3s;
+}
+
+.container:hover {
+  background: #a5089d25;
+  transition: 0.3s;
+}
+
+.label {
+  max-width: 15rem;
+
+  color: #000;
+
+  font-size: 1.75rem;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+}

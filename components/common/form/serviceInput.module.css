@@ -1,0 +1,159 @@
+.container {
+  --title-size: 1.5rem;
+  --content-size: 1.75rem;
+
+  width: 100%;
+}
+
+.title {
+  margin-bottom: 0.5rem;
+
+  color: #333;
+
+  font-size: var(--title-size);
+  text-transform: capitalize;
+}
+
+.required {
+  margin-left: 0.5rem;
+
+  color: #ff0000;
+}
+
+.addonsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  width: 100%;
+
+  padding: 1rem;
+
+  border-width: 0.2rem;
+  border-style: solid;
+  border-color: #000;
+  border-radius: 2rem;
+}
+
+.selectedAddonsSection {
+  width: 100%;
+  height: 20svh;
+
+  /* padding: 1rem; */
+
+  border-radius: 1rem;
+
+  overflow: hidden;
+}
+
+.addBtnContainer {
+  width: 4rem;
+}
+
+.selectionContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+
+  width: 90vw;
+  height: 90svh;
+
+  padding: 5rem;
+
+  border-radius: 2rem;
+
+  background-color: #fff;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  width: 100%;
+}
+
+.heading {
+  font-size: 2rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.searchSection {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 1rem;
+
+  width: 100%;
+}
+
+.reset {
+  width: 15%;
+}
+
+.addonsSection {
+  width: 100%;
+  height: 63svh;
+
+  padding: 1rem;
+
+  overflow: hidden;
+}
+
+.scrollContainer {
+  width: 100%;
+  height: 100%;
+
+  overflow-y: scroll;
+}
+
+.scrollContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollContainer {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.addons {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  align-items: center;
+  justify-content: center;
+  gap: 3em 1rem;
+
+  width: 100%;
+}
+
+.noResultContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 100%;
+}
+
+.noResult {
+  font-size: 2rem;
+  font-weight: 300;
+  text-transform: capitalize;
+}
+
+.actionsSection {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  width: 100%;
+}
+
+.btnContainer {
+  width: 10%;
+}

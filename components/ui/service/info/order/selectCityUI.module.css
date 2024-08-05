@@ -1,0 +1,33 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 5rem;
+  padding: 1rem 1.3rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  font-size: 1.75rem;
+  border: 1px solid #12121225;
+  width: 100%;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.label {
+  color: #111111;
+
+  font-size: 1.75rem;
+  font-weight: 400;
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    width: 100%;
+    padding: 1.5rem;
+  }
+}

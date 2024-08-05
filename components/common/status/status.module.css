@@ -1,0 +1,18 @@
+.container {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+  gap: 1rem;
+
+  width: 100vw;
+  height: 100svh;
+
+  padding: 1rem;
+
+  pointer-events: none;
+}

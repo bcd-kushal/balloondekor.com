@@ -1,0 +1,56 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 40rem;
+  height: 20rem;
+
+  padding: 3rem;
+
+  border-radius: 2rem;
+
+  background-color: #fff;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+
+  width: 100%;
+}
+
+.content h5 {
+  font-size: 2.5rem;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+
+  width: 100%;
+}
+
+/* @media only screen and (max-width: 997px) {
+  .dialogBox {
+    padding: 20px;
+    width: 35vw;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .dialogBox {
+    padding: 20px;
+    width: 45vw;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .dialogBox {
+    padding: 20px;
+    width: 75vw;
+  }
+} */

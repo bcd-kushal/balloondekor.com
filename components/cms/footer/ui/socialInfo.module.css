@@ -1,0 +1,16 @@
+.container {
+  width: auto;
+  height: auto;
+
+  overflow: hidden;
+
+  transition: transform 250ms ease;
+}
+
+.container:hover {
+  transform: translateY(-10%);
+}
+
+.logo {
+  object-fit: cover;
+}

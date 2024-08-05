@@ -1,0 +1,54 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+
+  padding: 2rem;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  width: 100%;
+  height: 70svh;
+}
+
+.topCity {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 2rem;
+
+  width: 100%;
+}
+
+.actionsContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  width: 100%;
+
+  padding-top: 2rem;
+}
+
+.actions {
+  width: 30%;
+}
+
+.show {
+  opacity: 1;
+
+  transition: opacity 250ms ease;
+}
+
+.hide {
+  opacity: 0 !important;
+}

@@ -1,0 +1,89 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  padding: 1rem 0rem;
+  text-transform: capitalize;
+  cursor: pointer;
+  position: sticky;
+  background: white;
+  transform: translateY(2px);
+  gap: 1.7rem;
+}
+
+.buyBtn {
+  display: block;
+  width: 50%;
+  min-width: 300px;
+  padding: 1.5rem;
+  background-color: rgb(255, 149, 0);
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 500;
+  font-family: inherit;
+  text-transform: capitalize;
+  border-radius: 1rem;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.buyBtn::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 20px;
+  background: linear-gradient(
+    to right,
+    #fff3,
+    #fff8,
+    #fff4
+  );
+  top: 0;
+  left: -36px;
+  scale: 1.4;
+  rotate: 25deg;
+  filter: blur(2px);
+  animation: shineAnimation 5s linear infinite;
+}
+
+.priceShow {
+  font-size: 2.1rem;
+  font-weight: 600;
+}
+
+@keyframes shineAnimation {
+  0% {
+    left: -36px;
+  }
+  40%,
+  100% {
+    left: 700px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    z-index: 999;
+    padding: 1rem;
+    justify-content: flex-end;
+    padding: 0;
+    background: transparent;
+  }
+
+  .buyBtn {
+    width: 100%;
+    min-width: auto;
+  }
+
+  .priceShow {
+    display: none;
+  }
+}
+
+@media only screen and (max-aspect-ratio: 1/1.1) {
+  .container {
+    position: sticky;
+  }
+}

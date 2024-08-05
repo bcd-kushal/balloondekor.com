@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+  width: 30%;
+
+  padding: 3rem;
+
+  border-radius: 2rem;
+
+  background-color: #fff;
+
+  z-index: 9999;
+}
+
+.title {
+  font-size: 2rem;
+  text-transform: capitalize;
+}

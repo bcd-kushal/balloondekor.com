@@ -1,0 +1,68 @@
+.imageContainer {
+  position: relative;
+
+  width: 100%;
+  aspect-ratio: 1;
+
+  border-radius: 1rem;
+
+  cursor: pointer;
+
+  transition: outline linear 100ms;
+}
+
+.indicator {
+  position: absolute;
+  top: 0.7rem;
+  right: 0.7rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  z-index: 9;
+  background-color: rgb(251, 172, 13);
+  box-shadow: 0 0 1rem #000;
+}
+
+.default {
+  background-color: orange;
+}
+
+.updated {
+  background-color: rgb(12, 211, 12);
+  box-shadow: 0 0 1rem #000;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+
+  border-radius: 1rem;
+  outline-width: 0.5rem;
+  outline-style: solid;
+  outline-color: transparent;
+
+  object-fit: cover;
+}
+
+.imageContainer:hover .image {
+  outline-color: #000;
+}
+
+.active {
+  outline-color: #2424c5 !important;
+}
+
+.selected {
+  outline-color: #269e26 !important;
+  animation: pulseShadow 10s linear infinite;
+}
+
+@keyframes pulseShadow {
+  0%,
+  100% {
+    box-shadow: 0 0 5px 8px #00aa0050;
+  }
+  50% {
+    box-shadow: 0 0 5px 8px #92ff8660;
+  }
+}

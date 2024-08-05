@@ -1,0 +1,40 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  width: 100%;
+  transition: 0.3s;
+}
+
+.container:hover {
+  background: #12121215;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1.2rem;
+}
+
+.locationIcon,
+.topCityIcon {
+  width: 1.5rem;
+  height: 1.5rem;
+  opacity: 0.6;
+}
+
+.name {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+@media (max-width: 480px) {
+  .name {
+    font-size: 1.85rem;
+  }
+}

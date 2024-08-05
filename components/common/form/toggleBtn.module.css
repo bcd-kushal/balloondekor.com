@@ -1,0 +1,102 @@
+.container {
+  --animation-duration: 250ms;
+  --translate-left-value: -50%;
+  --translate-right-value: 50%;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 3rem;
+  height: 1.8rem;
+
+  padding: 0.3rem;
+
+  border: none;
+  border-radius: 2.5rem;
+
+  background-color: #616161;
+
+  cursor: pointer;
+}
+
+.active {
+  animation: onColor var(--animation-duration)
+    ease 0ms 1 forwards;
+}
+
+.inactive {
+  animation: offColor var(--animation-duration)
+    ease 0ms 1 forwards;
+}
+
+.circle {
+  display: inline-block;
+
+  width: 1.2rem;
+  height: 1.2rem;
+
+  border-radius: 50%;
+
+  background-color: #ffffff;
+
+  transform: translateX(
+    var(--translate-left-value)
+  );
+}
+
+.circleActive {
+  animation: enabled var(--animation-duration)
+    ease 0s 1 forwards;
+}
+
+.circleInactive {
+  animation: disabled var(--animation-duration)
+    ease 0s 1 forwards;
+}
+
+@keyframes enabled {
+  from {
+    transform: translateX(
+      var(--translate-left-value)
+    );
+  }
+  to {
+    transform: translateX(
+      var(--translate-right-value)
+    );
+  }
+}
+
+@keyframes disabled {
+  from {
+    transform: translateX(
+      var(--translate-right-value)
+    );
+  }
+  to {
+    transform: translateX(
+      var(--translate-left-value)
+    );
+  }
+}
+
+@keyframes onColor {
+  from {
+    background-color: #616161;
+  }
+  to {
+    background-color: #0075fe;
+  }
+}
+
+@keyframes offColor {
+  from {
+    background-color: #0075fe;
+  }
+  to {
+    background-color: #616161;
+  }
+}

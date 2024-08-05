@@ -1,0 +1,33 @@
+.container {
+  position: relative;
+  display: grid;
+  grid-template:
+    "s h h" min-content
+    "s p p" 1fr
+    "s p p" 1fr / min-content 1fr 1fr;
+  height: 100svh;
+}
+
+.header {
+  grid-area: h;
+}
+
+.sidebar {
+  grid-area: s;
+  max-height: 100svh;
+  overflow: hidden;
+}
+
+.page {
+  grid-area: p;
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100svh;
+  font-size: 5rem;
+  text-transform: capitalize;
+}

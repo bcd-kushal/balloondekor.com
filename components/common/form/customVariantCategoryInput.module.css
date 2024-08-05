@@ -1,0 +1,91 @@
+.container {
+  --title-size: 1.5rem;
+  --content-size: 1.75rem;
+
+  width: 100%;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  width: 100%;
+
+  color: #121212;
+  font-weight: 600;
+
+  font-size: var(--title-size);
+  text-transform: capitalize;
+}
+
+.required {
+  margin-left: 0.5rem;
+
+  color: #ff0000;
+}
+
+.addonsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  width: 100%;
+
+  padding: 1rem;
+
+  border-radius: 2rem;
+}
+
+.selectedAddonsSection {
+  width: 100%;
+  /* height: 36svh; */
+
+  border-radius: 1rem;
+
+  overflow: hidden;
+}
+
+.addBtnContainer {
+  width: 4rem;
+}
+
+.scrollContainer {
+  width: 100%;
+  height: 100%;
+
+  overflow-y: scroll;
+}
+
+.scrollContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollContainer {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.addons {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+
+  width: 100%;
+}
+
+.actionsSection {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  width: 100%;
+}
+
+.btnContainer {
+  width: 10%;
+}

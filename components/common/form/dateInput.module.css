@@ -1,0 +1,54 @@
+.container {
+  --title-size: 1.5rem;
+  --content-size: 1.75rem;
+
+  width: 100%;
+
+  border: none;
+}
+
+.error {
+  border-color: #f00 !important;
+}
+
+.title {
+  margin-bottom: 0.5rem;
+
+  color: #333;
+
+  font-size: var(--title-size);
+  text-transform: capitalize;
+}
+
+.required {
+  margin-left: 0.5rem;
+
+  color: #f00;
+}
+
+.input {
+  width: 100%;
+
+  padding: 0.5rem 1rem;
+
+  border-width: 0.2rem;
+  border-style: solid;
+  border-color: #000;
+  border-radius: 1rem;
+
+  background-color: transparent;
+
+  font-size: var(--content-size);
+  text-align: center;
+}
+
+.input:focus {
+  border-color: #2e2eda;
+  outline: none;
+}
+
+.option {
+  background-color: transparent;
+
+  cursor: pointer;
+}

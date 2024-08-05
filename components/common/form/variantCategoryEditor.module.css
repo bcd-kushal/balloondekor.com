@@ -1,0 +1,141 @@
+.container {
+  --title-size: 1.5rem;
+  --content-size: 1.75rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+
+  width: 100%;
+
+  /* padding: 1rem; */
+
+  border-radius: 1rem;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+
+  width: 100%;
+}
+
+.srNoContainer {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+
+  min-width: 2rem;
+
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.inputsContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: flex-end;
+  justify-content: center;
+  gap: 3rem;
+
+  width: 100%;
+}
+
+.common {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  width: 100%;
+}
+
+.custom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  width: 100%;
+}
+
+.toggleContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 17.5%;
+
+  width: 100%;
+
+  padding-bottom: 1rem;
+}
+
+.unitContainer {
+  width: 100%;
+}
+
+.input {
+  width: 100%;
+
+  padding: 0.75rem 1rem;
+
+  border-width: 0.2rem;
+  border-style: solid;
+  border-color: #000;
+  border-radius: 1rem;
+
+  background-color: transparent;
+
+  font-size: var(--content-size);
+  text-align: center;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.closeBtn {
+  background-color: #fff;
+
+  border-radius: 50%;
+
+  opacity: 0.5;
+
+  transition: opacity 250ms ease;
+}
+
+.closeBtn:hover {
+  opacity: 1;
+}
+
+.variantsBtn {
+  width: 30%;
+}
+
+.disabled {
+  opacity: 0.75;
+
+  pointer-events: none;
+}
+
+.toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.toggleLabel {
+  text-wrap: nowrap;
+}
+
+.inputs {
+  width: 100%;
+}

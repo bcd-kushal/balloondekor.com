@@ -1,0 +1,20 @@
+.container {
+  position: sticky;
+  padding-top: 7px;
+  top: 0;
+  display: grid;
+  grid-template-columns: 1fr 6fr;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+  height: fit-content;
+  max-width: 100dvw;
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    position: relative;
+    display: flex;
+  }
+}

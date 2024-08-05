@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  padding: 0.5rem 1rem;
+
+  border: 1px solid #e8e8e8;
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px rgba(28, 28, 28, 0.08);
+
+  background-color: #fff;
+
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 1.3rem;
+}
+
+.icon {
+  height: 1.5rem;
+  width: 1.5rem;
+
+  vertical-align: middle;
+}

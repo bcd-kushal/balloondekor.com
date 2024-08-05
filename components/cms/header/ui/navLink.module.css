@@ -1,0 +1,138 @@
+.container {
+  padding: 0.5rem 1rem 0.7em;
+
+  border-bottom-width: 0.2rem;
+  border-bottom-style: solid;
+  border-color: transparent;
+
+  color: #000;
+
+  transition: all ease 0.5s;
+  /* width: 100%; */
+}
+
+.container:hover {
+  border-color: #d43790;
+}
+
+.navLink {
+  color: #000;
+
+  cursor: pointer;
+}
+
+.container:hover .navLink {
+  color: #d43790;
+}
+
+.nestedSections {
+  position: absolute;
+  top: 4rem;
+  left: 0;
+
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1rem 2rem;
+
+  width: 100%;
+
+  margin: 0 auto;
+  padding: 2rem;
+
+  border-radius: 1rem;
+  box-shadow:
+    0.2px 0.1px 2.2px rgba(0, 0, 0, 0.02),
+    0.5px 0.1px 5.3px rgba(0, 0, 0, 0.028),
+    0.9px 0.3px 10px rgba(0, 0, 0, 0.035),
+    1.6px 0.4px 17.9px rgba(0, 0, 0, 0.042),
+    2.9px 0.8px 33.4px rgba(0, 0, 0, 0.05),
+    7px 2px 80px rgba(0, 0, 0, 0.07);
+
+  background-color: #fff;
+
+  opacity: 0;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.container:hover .nestedSections,
+.nestedSections:hover {
+  opacity: 1;
+  pointer-events: all;
+}
+.actionsIcon {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    width: 100%;
+    padding: 0rem;
+  }
+  .navLink {
+    display: block;
+
+    width: 100%;
+
+    padding-bottom: 0.5rem;
+
+    pointer-events: none;
+  }
+  .nestedSections {
+    display: none;
+    flex-direction: column;
+
+    position: relative;
+    top: 0rem;
+
+    padding: 1em 0em;
+
+    box-shadow: none;
+    opacity: 1;
+  }
+
+  .flex {
+    display: flex !important;
+    animation: textAnimation 0.5s ease 0s 1
+      forwards;
+  }
+
+  @keyframes textAnimation {
+    from {
+      transform: translateY(3%);
+      opacity: 0.5;
+    }
+    to {
+      transform: translateY(0%);
+      opacity: 1;
+    }
+  }
+  .linkContainer {
+    position: relative;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 10px 0px;
+  }
+
+  .actionsIcon {
+    display: block;
+  }
+
+  .controllers {
+    display: flex;
+    justify-content: flex-end;
+
+    position: absolute;
+    top: 0px;
+    left: 0px;
+
+    width: 100%;
+
+    z-index: 99;
+  }
+}

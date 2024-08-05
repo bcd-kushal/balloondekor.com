@@ -1,0 +1,100 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+  max-width: 100dvw;
+  height: auto;
+  padding: 2rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+  max-width: calc(100dvw - 20px);
+  text-align: center;
+}
+
+.content > * {
+  max-width: 100dvw;
+  max-width: calc(100% - 10px);
+}
+
+.content > h1,
+.content > h2 {
+  color: #121212;
+  margin: 1rem 0;
+  font-size: 3em;
+  font-weight: 500;
+  text-align: left;
+  opacity: 0.8;
+  margin-top: 12px;
+}
+
+.content > h3,
+.content > p {
+  color: #121212;
+  font-size: 2rem;
+  font-weight: 500;
+  text-align: left;
+  margin-top: 7px;
+}
+
+.content > h4 {
+  color: #121212;
+  font-size: 1.7rem;
+  font-weight: 500;
+  text-align: left;
+  margin-top: 4px;
+}
+
+.content > h5 {
+  color: #121212;
+  font-size: 1.45rem;
+  font-weight: 500;
+  text-align: left;
+}
+
+.content > h6 {
+  color: #12121290;
+  font-size: 1.4rem;
+  font-weight: 500;
+  text-align: left;
+}
+
+.content > p {
+  color: #414141;
+  font-size: 1.5rem;
+  text-align: left;
+}
+
+.content > ul {
+  list-style-type: disc;
+  list-style: disc;
+}
+
+.content > ul,
+.content > li {
+  width: 100%;
+  font-size: 1.5rem;
+  text-align: left;
+  margin: 4px 0 6px 17px;
+  color: #414141;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: start;
+  gap: 6px;
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+}

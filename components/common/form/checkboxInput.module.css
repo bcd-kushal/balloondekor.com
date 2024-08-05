@@ -1,0 +1,52 @@
+.container {
+  --title-size: 2rem;
+  --content-size: 1.75rem;
+
+  padding: 1rem 2rem;
+}
+
+.error {
+  border: 0.1rem solid #ff0000;
+}
+
+.container .title {
+  margin-bottom: 1rem;
+
+  color: #333;
+
+  font-size: var(--title-size);
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.container .required {
+  margin-left: 0.5rem;
+
+  color: #ff0000;
+}
+
+.container .option {
+  display: block;
+
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+
+  font-size: var(--content-size);
+
+  cursor: pointer;
+}
+
+.container .checkbox {
+  width: var(--content-size);
+  height: var(--content-size);
+
+  margin-right: 0.5rem;
+
+  vertical-align: middle;
+
+  cursor: pointer;
+}
+
+.container .label {
+  text-transform: capitalize;
+}

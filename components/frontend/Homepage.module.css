@@ -1,0 +1,27 @@
+.main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.maine {
+  display: grid;
+  grid-template-areas:
+    "logo location search actions"
+    "logo location search actions";
+}
+
+.logo {
+  grid-area: logo;
+}
+
+@media only screen and (max-width: 768px) {
+  .maine {
+    grid-template-areas:
+      "logo location actions"
+      "search search search";
+  }
+  .main {
+    padding: 0;
+  }
+}

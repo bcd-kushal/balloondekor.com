@@ -1,0 +1,48 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: 0.4s;
+}
+
+.link {
+  padding: 1.15rem 1.5rem;
+  border: 1.5px solid #a5089d45;
+  border-radius: 1rem;
+  transition: 0.3s;
+}
+
+.link:hover {
+  background: #a5089d25;
+  color: #a5089d85;
+  transition: 0.3s;
+}
+
+.iconContainer {
+  width: 15rem;
+  height: 15rem;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.icon {
+  object-fit: cover;
+  transition: transform 450ms ease;
+}
+
+.container:hover .icon {
+  transform: scale(1.1) translateX(-0.15rem)
+    translateY(-0.15rem);
+}
+
+.label {
+  max-width: 15rem;
+  color: #000;
+  font-size: 1.75rem;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  padding-top: 3px;
+}

@@ -1,0 +1,180 @@
+.container,
+.container2 {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  grid-area: search;
+
+  width: 35rem;
+}
+.container2 {
+  display: none;
+}
+.input {
+  width: 100%;
+  height: 5rem;
+
+  border: none;
+
+  padding: 1rem 2rem;
+
+  font-size: 1.4rem;
+  font-weight: 400;
+  font-family: inherit;
+  text-align: left;
+
+  border: 1px solid #e8e8e8;
+  box-shadow: 0 2px 8px rgba(28, 28, 28, 0.08);
+  border-radius: 1rem;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.searchBtn {
+  position: absolute;
+  right: 2rem;
+  top: 1rem;
+}
+
+.placeholder {
+  position: absolute;
+  top: 0rem;
+  left: 2rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.25rem;
+
+  width: 100%;
+  height: 100%;
+
+  color: #212121;
+
+  font-size: 1.3rem;
+  opacity: 0.7;
+
+  pointer-events: none;
+}
+
+.trendingContainer {
+  display: none;
+
+  position: absolute;
+  top: 5rem;
+  left: 0rem;
+
+  height: auto;
+  width: 100%;
+
+  padding: 1rem;
+
+  background-color: #fff;
+  z-index: 9;
+
+  box-shadow:
+    0.4px 0.6px 2.2px rgba(0, 0, 0, 0.017),
+    1px 1.3px 5.3px rgba(0, 0, 0, 0.024),
+    1.9px 2.5px 10px rgba(0, 0, 0, 0.03),
+    3.4px 4.5px 17.9px rgba(0, 0, 0, 0.036),
+    6.3px 8.4px 33.4px rgba(0, 0, 0, 0.043),
+    15px 20px 80px rgba(0, 0, 0, 0.06);
+  border-radius: 1rem;
+}
+
+.block {
+  display: block;
+}
+
+.inputWrraper {
+  position: relative;
+
+  width: 100%;
+}
+
+.backBtn {
+  display: none;
+}
+@media only screen and (max-width: 1140px) {
+  .container,
+  .container2 {
+    width: 100%;
+
+    margin: 1.5em 0em 0em;
+  }
+
+  .container {
+    display: none;
+  }
+
+  .container2 {
+    position: fixed;
+    top: 0rem;
+    left: 0rem;
+    z-index: 999;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+
+    height: 100svh;
+
+    padding: 2rem 1rem;
+    margin: 0rem;
+
+    background-color: #fff;
+    border: none;
+    animation: fadeIn 0.5s ease 0s 1 forwards;
+  }
+
+  @keyframes fadeIn {
+    from {
+      top: 150rem;
+    }
+    to {
+      top: 0rem;
+    }
+  }
+
+  .trendingContainer {
+    position: relative;
+    top: 0rem;
+
+    display: block;
+
+    box-shadow: none;
+  }
+
+  .input {
+    height: 5rem;
+
+    padding: 1rem;
+
+    border: 0.1rem solid rgba(0, 0, 0, 0.2);
+    border-radius: 1rem;
+  }
+
+  .searchBtn {
+    position: absolute;
+    right: 3rem;
+    top: 1rem;
+  }
+
+  .placeholder {
+    top: 0rem;
+    left: 4rem;
+
+    z-index: 9999;
+  }
+
+  .backBtn {
+    display: block;
+  }
+}

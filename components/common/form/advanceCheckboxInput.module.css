@@ -1,0 +1,164 @@
+.container {
+  --title-size: 1.5rem;
+  --content-size: 1.75rem;
+
+  width: 100%;
+
+  border: none;
+}
+
+.error {
+  color: rgb(201, 0, 0) !important;
+  background: #aa000020 !important;
+}
+
+.title {
+  margin-bottom: 0.5rem;
+
+  color: #333;
+
+  font-size: var(--title-size);
+  text-transform: capitalize;
+}
+
+.required {
+  margin-left: 0.5rem;
+
+  color: #ff0000;
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  width: 100%;
+  height: 30rem;
+
+  padding: 0.75rem 1rem;
+  border-radius: 1.5rem;
+
+  background-color: transparent;
+
+  font-size: var(--content-size);
+  text-align: left;
+
+  overflow: hidden;
+}
+
+.search {
+  width: 100%;
+}
+
+.searchInput {
+  width: 100%;
+
+  padding: 0.5rem 1rem;
+
+  border: none;
+
+  background-color: transparent;
+
+  font-size: var(--content-size);
+  text-align: center;
+}
+
+.searchInput:focus {
+  outline: none;
+}
+
+.scrollContainer {
+  flex-grow: 1;
+
+  width: 100%;
+
+  overflow-y: scroll;
+}
+
+.scrollContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollContainer {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.optionsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  width: 100%;
+}
+
+.checkedOptionsContainer,
+.uncheckedOptionsContainer {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 1rem;
+
+  width: 100%;
+}
+
+.checkedOption,
+.uncheckedOption {
+  display: block;
+  padding: 0.5rem 1.3rem;
+  border-radius: 999px;
+  font-size: var(--content-size);
+  cursor: pointer;
+  transition: 0.25s;
+  font-weight: 500;
+  font-size: 1.4rem;
+}
+
+.checkedOption {
+  color: #0f72ce;
+  background: #2e92da20;
+}
+.checkedOption:hover {
+  background: #2e92da45;
+}
+
+.uncheckedOption {
+  background: #74747430;
+}
+.uncheckedOption:hover {
+  background: #74747450;
+}
+
+.checkbox {
+  display: none;
+}
+
+.label {
+  text-transform: capitalize;
+}
+
+.input:focus-within {
+  outline: none;
+}
+
+.errorMessage {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.5rem;
+
+  height: 2.2rem;
+
+  padding: 0.5rem 0;
+
+  font-size: 1.2rem;
+}
+
+.disabled {
+  pointer-events: none;
+}

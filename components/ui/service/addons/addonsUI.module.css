@@ -1,0 +1,71 @@
+.container {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: min-content min-content auto min-content;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 90dvw;
+  height: 80dvh;
+  border-radius: 2rem;
+  background-color: #fff;
+  padding: 2rem 0;
+}
+
+.heading {
+  font-size: 2.5rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  padding: 0.5rem 0 0 2rem;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1.5rem 2rem 0;
+  border-top: 0.1rem solid #00000022;
+}
+
+.price {
+  font-weight: 500;
+  font-size: 2.5rem;
+  display: flex;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.btn {
+  padding: 1rem 5rem;
+  border: none;
+  border-radius: 1rem;
+  background-color: #4f3267;
+  color: #fff;
+  font-size: 1.75rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  cursor: pointer;
+  outline: none;
+}
+
+@media screen and (max-width: 640px) {
+  .container {
+    width: 100dvw;
+    height: 100dvh;
+    border-radius: 0px;
+    padding-bottom: 1.5rem;
+  }
+  .price {
+    flex-direction: column;
+  }
+
+  .price > * {
+    line-height: 24px;
+  }
+}

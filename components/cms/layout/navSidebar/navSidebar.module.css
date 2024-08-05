@@ -1,0 +1,45 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  width: 20vw;
+  min-width: 360px;
+  height: 100svh;
+
+  border-right: 0.1rem solid #999;
+
+  overflow-y: auto;
+}
+
+.container::-webkit-scrollbar {
+  display: none;
+}
+
+.container {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.heading {
+  width: 100%;
+
+  padding: 1.05rem;
+
+  border-bottom: 0.1rem solid #999;
+
+  text-align: center;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  width: 100%;
+
+  padding: 1rem;
+}

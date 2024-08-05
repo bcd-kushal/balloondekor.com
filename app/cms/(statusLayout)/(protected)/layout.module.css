@@ -1,0 +1,31 @@
+.container {
+  grid-template:
+    "t h h" min-content
+    "s p p" 1fr
+    "s p p" 1fr / min-content 1fr 1fr;
+}
+
+.header {
+  grid-area: h;
+}
+
+.title {
+  grid-area: t;
+}
+
+.sidebar {
+  grid-area: s;
+}
+
+.page {
+  grid-area: p;
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100svh;
+  text-transform: capitalize;
+}

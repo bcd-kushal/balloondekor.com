@@ -1,0 +1,54 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0.5rem;
+  max-width: 20rem;
+}
+
+.image {
+  width: 25rem;
+  aspect-ratio: 1 / 1;
+  border-radius: 1rem;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  overflow-x: hidden;
+}
+
+.name {
+  color: #828282;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+.priceContainer {
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-start;
+  gap: 0.5rem;
+}
+
+.price {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.mrp {
+  color: #9f9f9f;
+  font-size: 1.45rem;
+}
+
+.discount {
+  color: #a1306b;
+
+  font-size: 1.45rem;
+  font-weight: 500;
+}

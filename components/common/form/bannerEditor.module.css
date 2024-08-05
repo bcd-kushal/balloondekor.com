@@ -1,0 +1,56 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  width: max-content;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.5rem;
+
+  width: 100%;
+}
+
+.srNo {
+  font-size: 1.75rem;
+}
+
+.closeBtn {
+  cursor: pointer;
+  /* opacity: 0;
+
+  transition: opacity 250ms ease; */
+}
+
+/* .container:hover .closeBtn {
+  opacity: 1;
+} */
+
+.imageInputContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.url {
+  width: 100%;
+
+  padding: 0.5rem 1rem;
+
+  border: 0.2rem solid #000;
+  border-radius: 1rem;
+
+  font-size: 1.75rem;
+  text-align: center;
+}
+
+.url:focus {
+  outline: none;
+}

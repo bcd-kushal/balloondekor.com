@@ -1,0 +1,49 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: min-content 1fr;
+  align-items: flex-start;
+  justify-content: center;
+
+  width: 100%;
+}
+
+.previewContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1rem;
+
+  padding: 1rem;
+}
+
+.heading {
+  padding-left: 1rem;
+
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+.preview {
+  padding: 1rem;
+
+  border-width: 0.2rem;
+  border-style: solid;
+  border-color: #000;
+  border-radius: 2rem;
+
+  width: 100%;
+}
+
+.header {
+  width: 100%;
+  height: 100%;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+}

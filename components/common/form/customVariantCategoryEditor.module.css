@@ -1,0 +1,34 @@
+.container {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  width: 16rem;
+
+  margin-top: 1rem;
+}
+
+.closeBtn {
+  position: absolute;
+  top: -0.75rem;
+  right: -0.75rem;
+
+  background-color: #fff;
+
+  opacity: 0.5;
+  z-index: 99;
+
+  transition: opacity 250ms ease;
+}
+
+.closeBtn:hover {
+  opacity: 1;
+}
+
+.disabled {
+  pointer-events: none;
+}
